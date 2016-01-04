@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Entropy",
-  "description": "A blank new tab page.",
-  "version": "1.0.0",
+  "name": "autorickroll",
+  "description": "Rick rolls newtabs...",
+  "version": "1.0.2",
   "chrome_url_overrides" : {
     "newtab": "ntp.html"
   }
