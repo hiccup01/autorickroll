@@ -17,14 +17,16 @@ body {
 }
 </style>
 <script type="text/javascript">
-var player = document.getElementsByClass("video");
+var player = document.getElementById("video");
 var w = window.innerWidth
 || document.documentElement.clientWidth
 || document.body.clientWidth;
 var h = window.innerHeight
 || document.documentElement.clientHeight
 || document.body.clientHeight;
+console.log(w)
 player.style.width = w;
+player.style.height = w / 0.75;
 </script>
 </html>
 
