@@ -1,2 +1,54 @@
 <!doctype html>
-<title>Untitled</title>
+<head><title>HAHAHA!!!!</title></head>
+<style type="text/css">
+iframe {
+	height:auto;
+	width:auto;
+}
+#IframeWrapper {
+	positon: relative;
+}
+#iframeBlocker{
+	position: absolute;
+	top: 0;
+	left: 0;  
+	width: auto;
+	height: auto;
+
+}
+</style>
+<div id="IframeWrapper">
+<div id="iframeBlocker"></div>
+<div id="player"></div>
+</div>
+<script>
+    //Loading YT api
+	var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player;
+    //Getting window size
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    //inting player
+     function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: height,
+          width: width,
+          videoId: 'dQw4w9WgXcQ'
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+      while (true) {
+        if (player.getPlayerState() != 1) {
+          player.playVideo();
+        }
+        if (player.isMuted == true) {
+          player.unMute();
+        }
+      }
+</script>
