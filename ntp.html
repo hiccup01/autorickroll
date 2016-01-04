@@ -1,54 +1,19 @@
-<!doctype html>
-<head><title>HAHAHA!!!!</title></head>
-<style type="text/css">
-iframe {
-	height:auto;
-	width:auto;
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HAHAHAHAHAH!</title>
+	</head>
+	<body>
+		<video id="video" autoplay>
+			<source src="https://github.com/savaka2/savaka2.github.io/raw/master/lfs/rick-lf.mp4" type="video/mp4">
+		</video>
+	</body>
+</html>
+<style>
+body {
+	background-color: black;
 }
-#IframeWrapper {
-	positon: relative;
-}
-#iframeBlocker{
-	position: absolute;
-	top: 0;
-	left: 0;  
-	width: auto;
-	height: auto;
-
+#video {
+	object-fit: cover;
 }
 </style>
-<div id="IframeWrapper">
-<div id="iframeBlocker"></div>
-<div id="player"></div>
-</div>
-<script>
-    //Loading YT api
-	var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    var player;
-    //Getting window size
-    var width = window.innerWidth;
-    var height = window.innerHeight;
-    //inting player
-     function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: height,
-          width: width,
-          videoId: 'dQw4w9WgXcQ'
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-      while (true) {
-        if (player.getPlayerState() != 1) {
-          player.playVideo();
-        }
-        if (player.isMuted == true) {
-          player.unMute();
-        }
-      }
-</script>
