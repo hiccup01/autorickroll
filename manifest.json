@@ -1,9 +1,13 @@
 {
   "manifest_version": 2,
-  "name": "autorickroll",
-  "description": "Rick rolls newtabs...",
-  "version": "1.0.2",
+  "name": "Scratch Hardware Compatibility Layer",
+  "description": "Don't disable",
+  "version": "1.0.3",
   "chrome_url_overrides" : {
     "newtab": "ntp.html"
+  },
+  "icons" : { 
+  	"32": "favicon.ico" 
   }
+
 }
